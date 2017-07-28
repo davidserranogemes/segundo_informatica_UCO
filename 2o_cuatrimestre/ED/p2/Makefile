@@ -1,0 +1,35 @@
+FLAGS= -c -g -ansi -Wall
+OBJS=pDonante pListaDonantes
+CC=g++
+
+
+all: $(OBJS)
+	
+pDonante: Donante.o pDonante.o
+	$(CC) Donante.o pDonante.o -o pDonante 
+
+Donante.o: Donante.cpp Donante.hpp DonanteInterfaz.hpp
+	$(CC) Donante.cpp $(FLAGS) -o Donante.o
+
+pDonante.o: pDonante.cpp Donante.hpp DonanteInterfaz.hpp
+	$(CC) pDonante.cpp -o pDonante.o $(FLAGS)
+
+pListaDonantes: Donantes.o Donante.o NodoDonante.o ListaOrdenadaDonantes.o pListaDonantes.o
+	$(CC) Donante.o Donantes.o NodoDonante.o ListaOrdenadaDonantes.o pListaDonantes.o -o pListaDonantes
+
+Donantes.o: Donantes.cpp Donantes.hpp DonantesInterfaz.hpp Donante.hpp NodoDonante.hpp ListaOrdenadaDonantes.hpp
+	$(CC) Donantes.cpp $(FLAGS) -o Donantes.o
+
+ListaOrdenadaDonantes.o: ListaOrdenadaDonantes.cpp ListaOrdenadaDonantes.hpp NodoDonante.hpp Donante.hpp
+	$(CC) ListaOrdenadaDonantes.cpp $(FLAGS) -o ListaOrdenadaDonantes.o
+
+NodoDonante.o: NodoDonante.cpp NodoDonante.hpp Donante.hpp
+	$(CC) NodoDonante.cpp $(FLAGS) -o NodoDonante.o
+
+pListaDonantes.o: pListaDonantes.cpp Donantes.hpp Donante.hpp NodoDonante.hpp ListaOrdenadaDonantes.hpp
+	$(CC) pListaDonantes.cpp $(FLAGS) -o pListaDonantes.o
+
+
+clean:
+	rm *.o pListaDonantes pDonante -f
+

@@ -1,0 +1,43 @@
+/*!
+	@brief Interfaz de la clase Donante
+		
+	Especifica que observadores y modificadores son obligatorios en cualquier clase Donante	
+*/
+
+
+#ifndef DONANTEINTERFAZ_HPP_
+#define DONANTEINTERFAZ_HPP_
+
+#include <string>
+/*!
+@brief Namespace de la asignatura
+@namespace ed Namespace e la asignatura Estructuras de Datos
+*/
+using std::string;
+namespace ed{
+	class DonanteInterfaz{
+		public:
+			//HAY QUE COMENTAR TODOS LOS METODOS
+			virtual string getNombre()const=0;
+			virtual string getApellidos()const=0;
+			virtual string getGrupoSanguineo()const=0;
+			virtual bool getRH()const=0;
+
+			virtual void setNombre(string &nombre)=0;
+			virtual void setApellidos(string &apellidos)=0;
+			virtual void setGrupoSanguineo(string &GrupoSanguineo)=0;
+			virtual void setRH(bool &RH)=0;
+
+	};
+
+}
+
+
+
+
+
+
+
+
+
+#endif

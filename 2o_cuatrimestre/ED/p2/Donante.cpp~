@@ -1,0 +1,209 @@
+#include <iostream>
+#include "Donante.hpp"
+#include <string>
+#include <cstring>
+#include <cstdlib>
+#include <cstdio>
+#include <fstream>
+namespace ed{			
+
+		void Donante::leerDonante(){
+			std::cin>>*this;
+
+		}
+
+		void Donante::escribirDonante(){
+			std::cout<<*this;
+		}
+
+
+		void Donante::modificarDonante(){
+			string mod;	
+		
+			std::cout<<"Se muestra el estado actual del donante: "<<std::endl<<*this;
+			std::cout<<"¿Quiere modificar su nombre?    S/N"<<std::endl;
+			std::cin>>mod;
+			if((mod=="S")or(mod=="s")){
+				std::cout<<"Introduce el nuevo nombre:"<<std::endl;
+				std::cin>>mod;
+				setNombre(mod);
+			}else{if((mod=="N")or(mod=="n")){
+				}else{
+					std::cout<<"ERROR debe decir S o N"<<std::endl;
+				}
+			}
+
+			std::cout<<"¿Quiere modificar sus apellidos?    S/N"<<std::endl;
+			std::cin>>mod;
+			if((mod=="S")or(mod=="s")){
+				std::cout<<"Introduce los nuevo apellidos:"<<std::endl;
+				std::cin>>mod;
+				setApellidos(mod);
+			}else{if((mod=="N")or(mod=="n")){
+				}else{
+					std::cout<<"ERROR debe decir S o N"<<std::endl;
+				}
+			}	
+
+			std::cout<<"¿Quiere modificar su grupo sanguineo?    S/N"<<std::endl;
+			std::cin>>mod;	
+			if((mod=="S")or(mod=="s")){
+				std::cout<<"Introduce el nuevo grupo sanguineo (Solo es valido A, B, AB o 0):"<<std::endl;
+				std::cin>>mod;
+				setGrupoSanguineo(mod);
+			}else{if((mod=="N")or(mod=="n")){
+				}else{
+					std::cout<<"ERROR debe decir S o N"<<std::endl;
+				}
+			}
+			
+
+			std::cout<<"¿Quiere modificar su RH?    S/N"<<std::endl;
+			std::cin>>mod;
+			if((mod=="S")or(mod=="s")){
+				std::cout<<"Introduce el nuevo RH (positivo para RH+, negativo para RH-)"<<std::endl;
+				std::cin>>mod;
+				if(mod=="positivo"){
+					setRH(true);
+					}else{if(mod=="negativo"){
+						setRH(false);
+						}else{
+							std::cout<<"ERROR, se debe introducir positivo o negativo"<<std::endl;
+							exit(-1);
+						}
+					}
+			}else{if((mod=="N")or(mod=="n")){
+				}else{
+					std::cout<<"ERROR debe decir S o N"<<std::endl;
+				}
+			}
+		}
+
+		Donante & Donante::operator=(const Donante &d){
+			setNombre(d.getNombre());
+			setApellidos(d.getApellidos());
+			setGrupoSanguineo(d.getGrupoSanguineo());
+			setRH(d.getRH());
+			return *this;
+		}
+
+		bool Donante::operator==(const Donante &d){
+			if((getNombre()==d.getNombre())and(getApellidos()==d.getApellidos())){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		bool Donante::operator<=(const Donante &d){
+			std::string stringThis, stringD;
+			char * charThis, *charD;
+			if((*this)==d){
+				return true;
+			}else{
+				stringThis=this->getApellidos();
+				stringD=d.getApellidos();
+
+				charThis=new char [stringThis.length()+1];
+				charD=new char [stringD.length()+1];
+
+				strcpy(charD,stringD.c_str());				
+				strcpy(charThis,stringThis.c_str());
+	
+				int option=strcmp(charThis,charD);
+				
+				if(option<0){///El apellido del donante que llama es menor(antes alfabeticamente) que el de d
+					return true;
+				}else{if(option>0){///El apellido del donante que llama es mayor(despues alfabeticamente) que el de d
+					return false;
+					}else{///Los apellidos son iguales, comprobamos el nombre
+						stringThis=this->getNombre();
+						stringD=d.getNombre();
+						
+						std::strcpy(charD,stringD.c_str());				
+						std::strcpy(charThis,stringThis.c_str());	
+						
+						int option=strcmp(charThis,charD);
+				
+						if(option<0){///El nombre del donante que llama es menor(antes alfabeticamente) que el de d
+							return true;
+						}else{if(option>0){///El nombre del donante que llama es mayor(despues alfabeticamente) que el de d
+							return false;
+							}else{
+								std::cout<<"ERROR INDEFINIDO"<<std::endl;
+								exit (-1);
+																
+							}
+						}
+					}
+				}
+			}
+		}
+
+		istream & operator>>(istream &stream, Donante &d){
+			char * aux=new char[100];
+			string auxString;
+			getchar();		
+
+			std::cout<<"Introduce el nombre"<<std::endl;			
+			stream.getline(aux,100,'\n');
+			auxString=aux;
+			d.setNombre(auxString);
+
+
+
+			std::cout<<"Introduce los apellidos"<<std::endl;
+			stream.getline(aux,100,'\n');
+			auxString=aux;
+			d.setApellidos(auxString);			
+
+
+			std::cout<<"Introduce el grupo sanguineo"<<std::endl;
+			stream>>auxString;
+			d.setGrupoSanguineo(auxString);
+
+		
+			std::cout<<"Introduce el RH, para indicar RH+ escriba \"positivo\", para indicar RH- escriba \"negativo\""<<std::endl;
+			stream>>auxString;
+			if(auxString=="positivo"){
+				d.setRH(true);
+			}else{if(auxString=="negativo"){
+					d.setRH(false);
+				}else{
+					std::cout<<"ERROR, se debe introducir positivo o negativo"<<std::endl;
+					exit(-1);
+				}
+			}
+			return stream;
+		 }
+
+		ostream &operator<<(ostream &stream, Donante const &d){
+			stream<<"Nombre: "<<d.getNombre()<<std::endl;		
+			stream<<"Apellidos: "<<d.getApellidos()<<std::endl;
+			stream<<"Grupo sanguineo: "<<d.getGrupoSanguineo()<<std::endl;
+			if(d.getRH()){
+				stream<<"RH+"<<std::endl;
+			}else{
+				stream<<"RH-"<<std::endl;
+			}
+			return stream;
+		}
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+#include <list>
+
+
+class Contador{
+	private:
+		int entero_;
+		int min_;
+		int max_;
+		list<int> previo_;
+		void ultValor(int last);
+	public:
+		Contador(int min=0,int max=1000, int init=0){min_=min;max_=max;if((init<min_)||(init>max_)){entero_=0;}else{entero_=init;}};
+		
+		Contador operator=(int aux);
+		Contador operator=(Contador aux);
+		
+		Contador operator++(void);
+		Contador operator++(int);
+
+		Contador operator--(void);
+		Contador operator--(int);
+
+
+		bool undo(int n=1);
+
+		int get(){return(entero_);};
+};

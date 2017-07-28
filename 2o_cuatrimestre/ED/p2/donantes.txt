@@ -1,0 +1,6 @@
+Zed/Zumaquero/B/negativo/
+David/A/A/negativo/
+Julian/Granados/B/positivo/
+Estefania/Ba/0/negativo/
+Rafa/Lisa/AB/negativo/
+Zais/Fregote/B/negativo/EOF

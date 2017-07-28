@@ -1,0 +1,7 @@
+Maria Elena/Pedrajas Peraba/A/positivo/1/
+Estefania/Barea Rodriguez/0/negativo/2/
+David/Alfaros Padilla/A/negativo/3/
+Julian/Lara Granados/B/positivo/8/
+Zacarias/Zumaquero Morales/B/negativo/13/
+Rafa/Manzano puentes/AB/negativo/17/
+Thais/Fregote/B/negativo/20/EOF

@@ -1,0 +1,154 @@
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 17:47 ?        00:00:00 /sbin/init
+root         2     0  0 17:47 ?        00:00:00 [kthreadd]
+root         3     2  0 17:47 ?        00:00:00 [ksoftirqd/0]
+root         5     2  0 17:47 ?        00:00:00 [kworker/0:0H]
+root         7     2  0 17:47 ?        00:00:00 [rcu_sched]
+root         8     2  0 17:47 ?        00:00:00 [rcu_bh]
+root         9     2  0 17:47 ?        00:00:00 [rcuos/0]
+root        10     2  0 17:47 ?        00:00:00 [rcuob/0]
+root        11     2  0 17:47 ?        00:00:00 [migration/0]
+root        12     2  0 17:47 ?        00:00:00 [watchdog/0]
+root        13     2  0 17:47 ?        00:00:00 [watchdog/1]
+root        14     2  0 17:47 ?        00:00:00 [migration/1]
+root        15     2  0 17:47 ?        00:00:00 [ksoftirqd/1]
+root        17     2  0 17:47 ?        00:00:00 [kworker/1:0H]
+root        18     2  0 17:47 ?        00:00:00 [rcuos/1]
+root        19     2  0 17:47 ?        00:00:00 [rcuob/1]
+root        20     2  0 17:47 ?        00:00:00 [khelper]
+root        21     2  0 17:47 ?        00:00:00 [kdevtmpfs]
+root        22     2  0 17:47 ?        00:00:00 [netns]
+root        23     2  0 17:47 ?        00:00:00 [perf]
+root        24     2  0 17:47 ?        00:00:00 [khungtaskd]
+root        25     2  0 17:47 ?        00:00:00 [writeback]
+root        26     2  0 17:47 ?        00:00:00 [ksmd]
+root        27     2  0 17:47 ?        00:00:00 [khugepaged]
+root        28     2  0 17:47 ?        00:00:00 [crypto]
+root        29     2  0 17:47 ?        00:00:00 [kintegrityd]
+root        30     2  0 17:47 ?        00:00:00 [bioset]
+root        31     2  0 17:47 ?        00:00:00 [kblockd]
+root        32     2  0 17:47 ?        00:00:00 [ata_sff]
+root        33     2  0 17:47 ?        00:00:00 [md]
+root        34     2  0 17:47 ?        00:00:00 [devfreq_wq]
+root        36     2  0 17:47 ?        00:00:00 [kworker/1:1]
+root        37     2  0 17:47 ?        00:00:01 [kworker/0:1]
+root        39     2  0 17:47 ?        00:00:00 [kswapd0]
+root        40     2  0 17:47 ?        00:00:00 [fsnotify_mark]
+root        41     2  0 17:47 ?        00:00:00 [ecryptfs-kthrea]
+root        53     2  0 17:47 ?        00:00:00 [kthrotld]
+root        54     2  0 17:47 ?        00:00:00 [acpi_thermal_pm]
+root        55     2  0 17:47 ?        00:00:00 [scsi_eh_0]
+root        56     2  0 17:47 ?        00:00:00 [scsi_tmf_0]
+root        57     2  0 17:47 ?        00:00:00 [scsi_eh_1]
+root        58     2  0 17:47 ?        00:00:00 [scsi_tmf_1]
+root        63     2  0 17:47 ?        00:00:00 [ipv6_addrconf]
+root        83     2  0 17:47 ?        00:00:00 [deferwq]
+root        84     2  0 17:47 ?        00:00:00 [charger_manager]
+root       129     2  0 17:47 ?        00:00:00 [kpsmoused]
+root       161     2  0 17:47 ?        00:00:00 [kworker/0:1H]
+root       164     2  0 17:47 ?        00:00:00 [scsi_eh_2]
+root       165     2  0 17:47 ?        00:00:00 [scsi_tmf_2]
+root       166     2  0 17:47 ?        00:00:00 [usb-storage]
+root       229     2  0 17:47 ?        00:00:00 [jbd2/sda1-8]
+root       230     2  0 17:47 ?        00:00:00 [ext4-rsv-conver]
+root       352     1  0 17:47 ?        00:00:00 upstart-udev-bridge --daemon
+root       357     1  0 17:47 ?        00:00:00 /lib/systemd/systemd-udevd --daemon
+root       412     2  0 17:47 ?        00:00:00 [iprt-VBoxWQueue]
+root       437     2  0 17:47 ?        00:00:00 [kworker/0:2]
+root       457     2  0 17:47 ?        00:00:00 [kmpathd]
+root       458     2  0 17:47 ?        00:00:00 [kmpath_handlerd]
+root       555     1  0 17:47 ?        00:00:00 smbd -F
+message+   640     1  0 17:47 ?        00:00:00 dbus-daemon --system --fork
+root       676     1  0 17:47 ?        00:00:00 /usr/sbin/ModemManager
+root       682     1  0 17:47 ?        00:00:00 /usr/sbin/bluetoothd
+root       691     1  0 17:47 ?        00:00:00 upstart-socket-bridge --daemon
+root       697     1  0 17:47 ?        00:00:00 upstart-file-bridge --daemon
+root       698     2  0 17:47 ?        00:00:00 [krfcommd]
+syslog     702     1  0 17:47 ?        00:00:00 rsyslogd
+avahi      751     1  0 17:47 ?        00:00:00 avahi-daemon: running [david-VirtualBox.local]
+root       759     1  0 17:47 ?        00:00:00 /lib/systemd/systemd-logind
+avahi      770   751  0 17:47 ?        00:00:00 avahi-daemon: chroot helper
+root       811     1  0 17:47 tty4     00:00:00 /sbin/getty -8 38400 tty4
+root       813     1  0 17:47 tty5     00:00:00 /sbin/getty -8 38400 tty5
+root       819     1  0 17:47 tty2     00:00:00 /sbin/getty -8 38400 tty2
+root       820     1  0 17:47 tty3     00:00:00 /sbin/getty -8 38400 tty3
+root       824     1  0 17:47 tty6     00:00:00 /sbin/getty -8 38400 tty6
+root       892     1  0 17:47 ?        00:00:00 /usr/sbin/cups-browsed
+root       918     1  0 17:47 ?        00:00:00 acpid -c /etc/acpi/events -s /var/run/acpid.socket
+root       936     1  0 17:47 ?        00:00:00 /usr/sbin/irqbalance
+root       938     1  0 17:47 ?        00:00:00 cron
+kernoops  1050     1  0 17:47 ?        00:00:00 /usr/sbin/kerneloops
+root      1055     1  0 17:47 ?        00:00:00 NetworkManager
+root      1062   555  0 17:47 ?        00:00:00 smbd -F
+root      1067     1  0 17:47 ?        00:00:00 /usr/lib/policykit-1/polkitd --no-debug
+root      1093  1055  0 17:47 ?        00:00:00 /sbin/dhclient -d -sf /usr/lib/NetworkManager/nm-dhcp-client.action -pf /run/sendsigs.omit.d/network-manager.dhclient-eth0.pid -lf /var/lib/NetworkManager/dhclient-33391468-2660-49f1-9fd0-df563e477c66-eth0.lease -cf /var/lib/NetworkManager/dhclient-eth0.conf eth0
+root      1311     1  0 17:47 ?        00:00:01 /usr/sbin/VBoxService
+root      1325     1  0 17:47 ?        00:00:00 /usr/sbin/console-kit-daemon --no-daemon
+root      1437     1  0 17:47 tty1     00:00:00 /sbin/getty -8 38400 tty1
+nobody    1443  1055  0 17:47 ?        00:00:00 /usr/sbin/dnsmasq --no-resolv --keep-in-foreground --no-hosts --bind-interfaces --pid-file=/run/sendsigs.omit.d/network-manager.dnsmasq.pid --listen-address=127.0.1.1 --conf-file=/var/run/NetworkManager/dnsmasq.conf --cache-size=0 --proxy-dnssec --enable-dbus=org.freedesktop.NetworkManager.dnsmasq --conf-dir=/etc/NetworkManager/dnsmasq.d
+root      1588     1  0 17:47 ?        00:00:00 nmbd -D
+root      1596     1  0 17:47 ?        00:00:00 mdm
+root      1605  1596  0 17:47 ?        00:00:00 mdm
+root      1615  1605  2 17:47 tty8     00:01:54 /usr/bin/X :0 -audit 0 -auth /var/lib/mdm/:0.Xauth -nolisten tcp vt8
+mdm       1670     1  0 17:47 ?        00:00:00 dbus-launch --autolaunch=8384bcff4c958fada03d752656f68f96 --binary-syntax --close-stderr
+mdm       1671     1  0 17:47 ?        00:00:00 //bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+root      1754     2  0 17:48 ?        00:00:00 [kworker/1:1H]
+root      1914     1  0 17:52 ?        00:00:00 /usr/sbin/cupsd -f
+root      1975     2  0 17:54 ?        00:00:00 [kauditd]
+david     1978     1  0 17:54 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+david     1989  1605  0 17:54 ?        00:00:00 cinnamon-session --session cinnamon
+david     2119     1  0 17:54 ?        00:00:00 dbus-launch --autolaunch=8384bcff4c958fada03d752656f68f96 --binary-syntax --close-stderr
+david     2120     1  0 17:54 ?        00:00:00 //bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+david     2123     1  0 17:54 ?        00:00:00 /usr/bin/VBoxClient --clipboard
+david     2125  2123  0 17:54 ?        00:00:00 /usr/bin/VBoxClient --clipboard
+david     2134     1  0 17:54 ?        00:00:00 /usr/bin/VBoxClient --display
+david     2136  2134  0 17:54 ?        00:00:00 /usr/bin/VBoxClient --display
+david     2142     1  0 17:54 ?        00:00:00 /usr/bin/VBoxClient --seamless
+david     2143  2142  0 17:54 ?        00:00:00 /usr/bin/VBoxClient --seamless
+david     2147     1  0 17:54 ?        00:00:00 /usr/bin/VBoxClient --draganddrop
+david     2149  2147  0 17:54 ?        00:00:06 /usr/bin/VBoxClient --draganddrop
+david     2151  1989  0 17:54 ?        00:00:00 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session /usr/bin/im-launch cinnamon-session-cinnamon
+david     2157     1  0 17:54 ?        00:00:00 /usr/bin/dbus-launch --exit-with-session /usr/bin/im-launch cinnamon-session-cinnamon
+david     2158     1  0 17:54 ?        00:00:00 //bin/dbus-daemon --fork --print-pid 6 --print-address 9 --session
+david     2231     1  0 17:54 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+david     2235  2231  0 17:54 ?        00:00:00 /bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+david     2238     1  0 17:54 ?        00:00:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+david     2247  1989  0 17:54 ?        00:00:01 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/cinnamon-settings-daemon
+david     2256     1  0 17:54 ?        00:00:00 /usr/bin/pulseaudio --start --log-target=syslog
+rtkit     2258     1  0 17:54 ?        00:00:00 /usr/lib/rtkit/rtkit-daemon
+root      2267     1  0 17:54 ?        00:00:00 /usr/lib/upower/upowerd
+david     2332     1  0 17:54 ?        00:00:00 /usr/lib/gvfs/gvfsd
+david     2337     1  0 17:54 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+david     2395     1  0 17:54 ?        00:00:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+root      2398     1  0 17:54 ?        00:00:00 /usr/lib/udisks2/udisksd --no-debug
+david     2407     1  0 17:54 ?        00:00:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+david     2411     1  0 17:54 ?        00:00:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+david     2416     1  0 17:54 ?        00:00:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+david     2419  1989  0 17:54 ?        00:00:00 /usr/bin/python2 /usr/bin/cinnamon-launcher
+colord    2421     1  0 17:54 ?        00:00:00 /usr/lib/colord/colord
+root      2424     2  0 17:54 ?        00:00:00 [kworker/1:0]
+david     2428     1  0 17:54 ?        00:00:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-printer
+david     2437  2419  2 17:54 ?        00:01:34 cinnamon --replace
+david     2452  1989  0 17:54 ?        00:00:09 nemo -n
+david     2453  1989  0 17:54 ?        00:00:00 nm-applet
+david     2454  1989  0 17:54 ?        00:00:00 /usr/bin/python2 /usr/bin/cinnamon-killer-daemon
+david     2456  1989  0 17:54 ?        00:00:00 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+david     2476     1  0 17:54 ?        00:00:00 /usr/lib/gvfs/gvfsd-metadata
+david     2483     1  0 17:54 ?        00:00:00 /usr/lib/x86_64-linux-gnu/gconf/gconfd-2
+david     2495     1  0 17:54 ?        00:00:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.8 /org/gtk/gvfs/exec_spaw/0
+david     2501     1  0 17:54 ?        00:00:00 /usr/lib/dconf/dconf-service
+root      2506     1  0 17:54 ?        00:00:00 /usr/lib/accountsservice/accounts-daemon
+david     2535  1989  0 17:55 ?        00:00:00 cinnamon-screensaver
+david     2536  1989  0 17:55 ?        00:00:00 /usr/bin/python /usr/bin/mintupdate-launcher
+david     2539  2536  0 17:55 ?        00:00:00 sh -c /usr/lib/linuxmint/mintUpdate/mintUpdate.py
+david     2540  2539  0 17:55 ?        00:00:00 /usr/bin/python2.7 /usr/lib/linuxmint/mintUpdate/mintUpdate.py
+david     2579  1989  0 17:55 ?        00:00:00 /usr/bin/python /usr/share/system-config-printer/applet.py
+david     2586  2437  0 17:57 ?        00:00:14 gnome-terminal
+david     2592  2586  0 17:57 ?        00:00:00 gnome-pty-helper
+david     2593  2586  0 17:57 pts/1    00:00:00 bash
+david     2674  2593  1 18:02 pts/1    00:00:42 gedit ejercicio3.sh
+david     3193     1  0 18:18 ?        00:00:00 /usr/lib/gvfs/gvfsd-recent --spawner :1.8 /org/gtk/gvfs/exec_spaw/1
+root      3343     2  0 18:20 ?        00:00:00 [kworker/u4:2]
+root      3767     2  0 18:45 ?        00:00:00 [kworker/u4:0]
+root      3799     2  0 18:52 ?        00:00:00 [kworker/u4:1]
+david     3803  2593  0 18:54 pts/1    00:00:00 ps -ef

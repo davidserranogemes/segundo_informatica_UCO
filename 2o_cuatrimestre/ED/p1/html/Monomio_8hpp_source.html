@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>P1_ED_Polinomio-de-una-variable_David_Serrano_Gemes: Fichero Fuente Monomio.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">P1_ED_Polinomio-de-una-variable_David_Serrano_Gemes
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Amigas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Monomio.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef MONOMIO_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MONOMIO_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;MonomioInterfaz.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::cout;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::cin;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> std::endl;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> std::istream;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> std::ostream;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>ed{</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classed_1_1Monomio.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classed_1_1Monomio.html">Monomio</a>:<span class="keyword">public</span> <a class="code" href="classed_1_1MonomioInterfaz.html">MonomioInterfaz</a>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordtype">float</span> _Coeficiente;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordtype">int</span> _Grado;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classed_1_1Monomio.html#ad11bc8c58c816a2c15d815a83335ff12">   43</a></span>&#160;                <span class="keyword">inline</span> <a class="code" href="classed_1_1Monomio.html#ad11bc8c58c816a2c15d815a83335ff12">Monomio</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> Coeficiente=1, <span class="keyword">const</span> <span class="keywordtype">int</span> Grado=0){</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    assert(Grado&gt;=0);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    _Coeficiente=Coeficiente;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    _Grado=Grado;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                }</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classed_1_1Monomio.html#a1cc221111dae02b0fb84142292d85394">   55</a></span>&#160;                <span class="keyword">inline</span> <a class="code" href="classed_1_1Monomio.html#a1cc221111dae02b0fb84142292d85394">Monomio</a>(<span class="keyword">const</span> <a class="code" href="classed_1_1Monomio.html">Monomio</a> &amp;M){</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    assert(M.<a class="code" href="classed_1_1Monomio.html#a22fd67c971fbbc239e882a0adc0f3ef2">getGrado</a>()&gt;=0);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    _Grado=M.<a class="code" href="classed_1_1Monomio.html#a22fd67c971fbbc239e882a0adc0f3ef2">getGrado</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    _Coeficiente=M.<a class="code" href="classed_1_1Monomio.html#a25477c794fdbe91c3f0c8d6da003dcca">getCoeficiente</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordtype">float</span> <a class="code" href="classed_1_1Monomio.html#a25477c794fdbe91c3f0c8d6da003dcca">getCoeficiente</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classed_1_1Monomio.html#a22fd67c971fbbc239e882a0adc0f3ef2">getGrado</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classed_1_1Monomio.html#a2a7720cbc2bb37e03ecc176ba4a82b10">setCoeficiente</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> Coeficiente);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classed_1_1Monomio.html#a7b82338b456e63a811c8eb7d14df8713">setGrado</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> Grado);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classed_1_1Monomio.html#a990204a1b1c023eb1c1159d9940a7736">leerMonomio</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classed_1_1Monomio.html#a0e5b012fb2753b82d3a3497952a6077c">escribirMonomio</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <a class="code" href="classed_1_1Monomio.html">Monomio</a> <a class="code" href="classed_1_1Monomio.html#a18216c924b1c893df297c60f2fc24ee2">operator=</a>(<span class="keyword">const</span> <a class="code" href="classed_1_1Monomio.html">Monomio</a> &amp;m);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <a class="code" href="classed_1_1Monomio.html">Monomio</a> <a class="code" href="classed_1_1Monomio.html#a7bfba4db6d49499cfce2621dbf4fd886">operator*</a>(<span class="keyword">const</span> <a class="code" href="classed_1_1Monomio.html">Monomio</a> &amp;m)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classed_1_1Monomio.html#ac30827bc525dce73382f6c02b2c301cc">resultadoMonomio</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;xValor);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keyword">friend</span> istream &amp;<a class="code" href="classed_1_1Monomio.html#a90249ee0819ba69d318f7d07b8a53589">operator&gt;&gt;</a>(istream &amp;stream, <a class="code" href="classed_1_1Monomio.html">Monomio</a> &amp;m);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keyword">friend</span> ostream &amp;<a class="code" href="classed_1_1Monomio.html#a98db3fb18b90b2ecc006d4070285d3e2">operator&lt;&lt;</a>(ostream &amp;stream, <a class="code" href="classed_1_1Monomio.html">Monomio</a> <span class="keyword">const</span> &amp;m);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    };</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classed_1_1Monomio_html_a98db3fb18b90b2ecc006d4070285d3e2"><div class="ttname"><a href="classed_1_1Monomio.html#a98db3fb18b90b2ecc006d4070285d3e2">ed::Monomio::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;stream, Monomio const &amp;m)</div><div class="ttdoc">Sobrecarga del operador &lt;&lt;. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00190">Monomio.cpp:190</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html"><div class="ttname"><a href="classed_1_1Monomio.html">ed::Monomio</a></div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8hpp_source.html#l00027">Monomio.hpp:27</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_ad11bc8c58c816a2c15d815a83335ff12"><div class="ttname"><a href="classed_1_1Monomio.html#ad11bc8c58c816a2c15d815a83335ff12">ed::Monomio::Monomio</a></div><div class="ttdeci">Monomio(const float Coeficiente=1, const int Grado=0)</div><div class="ttdoc">Constructor por defecto de la clase Monomio. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8hpp_source.html#l00043">Monomio.hpp:43</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_ac30827bc525dce73382f6c02b2c301cc"><div class="ttname"><a href="classed_1_1Monomio.html#ac30827bc525dce73382f6c02b2c301cc">ed::Monomio::resultadoMonomio</a></div><div class="ttdeci">int resultadoMonomio(const int &amp;xValor)</div><div class="ttdoc">Calcula el valor del monomio para un valor x. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00163">Monomio.cpp:163</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a0e5b012fb2753b82d3a3497952a6077c"><div class="ttname"><a href="classed_1_1Monomio.html#a0e5b012fb2753b82d3a3497952a6077c">ed::Monomio::escribirMonomio</a></div><div class="ttdeci">void escribirMonomio() const </div><div class="ttdoc">Escribe en la pantalla los datos del Monomio de forma adecuada Escribe el monomio por pantalla segun ...</div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00073">Monomio.cpp:73</a></div></div>
+<div class="ttc" id="classed_1_1MonomioInterfaz_html"><div class="ttname"><a href="classed_1_1MonomioInterfaz.html">ed::MonomioInterfaz</a></div><div class="ttdef"><b>Definition:</b> <a href="MonomioInterfaz_8hpp_source.html#l00017">MonomioInterfaz.hpp:17</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a990204a1b1c023eb1c1159d9940a7736"><div class="ttname"><a href="classed_1_1Monomio.html#a990204a1b1c023eb1c1159d9940a7736">ed::Monomio::leerMonomio</a></div><div class="ttdeci">void leerMonomio()</div><div class="ttdoc">Lee por pantalla los datos del monomio Muestra por pantalla mensajes que guian al usuario para que in...</div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00049">Monomio.cpp:49</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a18216c924b1c893df297c60f2fc24ee2"><div class="ttname"><a href="classed_1_1Monomio.html#a18216c924b1c893df297c60f2fc24ee2">ed::Monomio::operator=</a></div><div class="ttdeci">Monomio operator=(const Monomio &amp;m)</div><div class="ttdoc">Sobrecarga del operador =. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00134">Monomio.cpp:134</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a7bfba4db6d49499cfce2621dbf4fd886"><div class="ttname"><a href="classed_1_1Monomio.html#a7bfba4db6d49499cfce2621dbf4fd886">ed::Monomio::operator*</a></div><div class="ttdeci">Monomio operator*(const Monomio &amp;m) const </div><div class="ttdoc">Sobrecarga del operador *. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00147">Monomio.cpp:147</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a22fd67c971fbbc239e882a0adc0f3ef2"><div class="ttname"><a href="classed_1_1Monomio.html#a22fd67c971fbbc239e882a0adc0f3ef2">ed::Monomio::getGrado</a></div><div class="ttdeci">int getGrado() const </div><div class="ttdoc">Observador del grado del monomio. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00027">Monomio.cpp:27</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a7b82338b456e63a811c8eb7d14df8713"><div class="ttname"><a href="classed_1_1Monomio.html#a7b82338b456e63a811c8eb7d14df8713">ed::Monomio::setGrado</a></div><div class="ttdeci">void setGrado(const int Grado)</div><div class="ttdoc">Modificador del grado del monomio. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00041">Monomio.cpp:41</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a90249ee0819ba69d318f7d07b8a53589"><div class="ttname"><a href="classed_1_1Monomio.html#a90249ee0819ba69d318f7d07b8a53589">ed::Monomio::operator&gt;&gt;</a></div><div class="ttdeci">friend istream &amp; operator&gt;&gt;(istream &amp;stream, Monomio &amp;m)</div><div class="ttdoc">Sobrecarga del operador &gt;&gt; </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00177">Monomio.cpp:177</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a2a7720cbc2bb37e03ecc176ba4a82b10"><div class="ttname"><a href="classed_1_1Monomio.html#a2a7720cbc2bb37e03ecc176ba4a82b10">ed::Monomio::setCoeficiente</a></div><div class="ttdeci">void setCoeficiente(const float Coeficiente)</div><div class="ttdoc">Modificador del coeficiente del monomio. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00034">Monomio.cpp:34</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a25477c794fdbe91c3f0c8d6da003dcca"><div class="ttname"><a href="classed_1_1Monomio.html#a25477c794fdbe91c3f0c8d6da003dcca">ed::Monomio::getCoeficiente</a></div><div class="ttdeci">float getCoeficiente() const </div><div class="ttdoc">Observador del coeficiente del monomio. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8cpp_source.html#l00020">Monomio.cpp:20</a></div></div>
+<div class="ttc" id="classed_1_1Monomio_html_a1cc221111dae02b0fb84142292d85394"><div class="ttname"><a href="classed_1_1Monomio.html#a1cc221111dae02b0fb84142292d85394">ed::Monomio::Monomio</a></div><div class="ttdeci">Monomio(const Monomio &amp;M)</div><div class="ttdoc">Constructor de copia. </div><div class="ttdef"><b>Definition:</b> <a href="Monomio_8hpp_source.html#l00055">Monomio.hpp:55</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 14 de Marzo de 2016 19:49:01 para P1_ED_Polinomio-de-una-variable_David_Serrano_Gemes por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

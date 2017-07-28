@@ -1,0 +1,48 @@
+#ifndef NODODONANTE_HPP
+#define NODODONANTE_HPP
+#include "Donante.hpp"
+
+
+namespace ed{
+
+	class NodoDonante{
+		public: 
+			Donante donante_;
+			NodoDonante * anterior_;
+			NodoDonante * siguiente_;
+		private:
+			NodoDonante(Donante d,NodoDonante * a=NULL, NodoDonante *s=NULL){
+				donante_=d;
+				anterior_=a;
+				siguiente_=s;
+			}
+	
+
+			///Observadores
+
+			inline Donante getDonante()const{return donante_;};
+			inline NodoDonante* getAnterior()const{return anterior_;};
+			inline NodoDonante* getSiguiente()const{return siguiente_;};
+
+			inline bool isFirst()const{if(getAnterior()==NULL){return true;}else{return false;}};
+			inline bool isLast()const{if(getSiguiente()==NULL){return true;}else{return false;}};
+			///Modificadores
+
+			inline void setDonante(Donante &d){donante_=d;};
+			inline void setSiguiente( NodoDonante * s){siguiente_=s;};
+			inline void setAnterior( NodoDonante* a){anterior_=a;};
+	};
+
+
+
+
+
+}
+
+
+
+
+
+
+
+#endif

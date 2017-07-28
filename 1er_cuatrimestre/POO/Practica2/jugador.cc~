@@ -1,0 +1,42 @@
+#include "jugador.h"
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <istream>
+#include <cstdlib>
+
+using namespace std;
+
+bool Jugador::setApuestas(){
+	char * nombre=new char[14];
+	char * linea=new char[30];	
+			
+	Apuesta auxiliar;
+	apuestas_.clear();
+	
+	string aux=getDNI();
+	//string txt(".txt");
+	aux=aux+".txt";
+	strcpy(nombre,aux.c_str());
+	
+	
+	ifstream fichero(nombre);
+	
+	while(fichero.getline(linea,20,',')){			//getline(linea,10,'\n')){ //NO LEES EL FICHERO 
+		auxiliar.tipo=atoi(linea);
+		cout<<auxiliar.tipo<<"TIPO\n";
+		fichero.getline(linea,20,',');
+		auxiliar.valor=linea;
+		cout<<auxiliar.valor<<"VALOR\n";
+		fichero.getline(linea,20,'\n');
+		auxiliar.cantidad=atoi(linea);
+		cout<<auxiliar.cantidad<<"CANTIDAD\n\n";
+		
+		apuestas_.push_back(auxiliar);
+		
+		}
+	fichero.close();
+	return(true);
+}
+	

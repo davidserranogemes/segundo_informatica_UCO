@@ -1,0 +1,102 @@
+#ifndef POLINOMIO_HPP
+#define POLINOMIO_HPP
+
+#include <iostream>
+#include <cmath>
+#include <list>
+#include "PolinomioInterfaz.hpp"
+#include "Monomio.hpp"
+
+
+using std::cin;
+using std::cout;
+using std::endl;
+using std::istream;
+using std::ostream;
+using std::list;
+
+namespace ed{
+
+	class Polinomio:PolinomioInterfaz{
+		private:
+			int grado_;					
+			int numMonomio_;
+			list<Monomio> monomio_;
+			
+		public:
+			Polinomio(int numMonomio=0){
+				assert(numMonomio>=0);
+				Monomio auxMon;
+				int auxGrado=0;
+				for(int i=0;i<numMonomio;i++){
+					cin>>auxMon;
+					monomio_.push_back(auxMon);
+					if(auxGrado<auxMon.getGrado()){
+						auxGrado=auxMon.getGrado();
+					}
+					
+				}
+				grado_=auxGrado;
+				unirPolinomio();
+
+			}
+			Polinomio(const Polinomio &p){
+				grado_=p.getGrado();
+				numMonomio_=p.getNumMonomio();
+				monomio_=p.getMonomios();
+			}
+
+			inline int getGrado()const{return grado_;};
+			inline int getNumMonomio()const{return monomio_.size();};
+			inline list<Monomio> getMonomios()const{return monomio_;};
+	
+			void setMonomios(list<Monomio> Monomios);
+			inline void setGrado(int grado){assert(grado>=0);grado_=grado;};
+			inline void setNumMonomio(int NumMonomio){assert(NumMonomio>=0);numMonomio_=NumMonomio;};			
+
+			void unirPolinomio();
+			inline bool isEmpty(){
+				if(monomio_.size()==0){
+					return true;
+				}else{
+					return false;
+				}
+			}
+
+			void leerPolinomio();
+			void escribirPolinomio();
+			
+			Polinomio operator+(const Polinomio &p)const;
+			Polinomio operator*(const Polinomio &p)const;
+			Polinomio operator=(const Polinomio &p);
+
+			friend istream &operator>>(istream &stream, Polinomio &p);
+			friend ostream &operator<<(ostream &stream, Polinomio &p);
+			
+
+			
+			int obtenerResultados(const int &i);
+
+
+	};
+
+}
+
+
+
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

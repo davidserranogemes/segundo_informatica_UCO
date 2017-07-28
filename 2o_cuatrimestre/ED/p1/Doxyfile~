@@ -1,0 +1,39 @@
+# Nombre del proyecto
+PROJECT_NAME           = Nombre del proyecto
+
+# Idioma: espaÃ±ol
+OUTPUT_LANGUAGE        = Spanish
+
+# Muestra la parte privada
+EXTRACT_PRIVATE        = YES
+
+# Muestra los ficheros "c"
+SOURCE_BROWSER         = YES
+
+# No se genera la documentaciÃ³n en latex
+GENERATE_LATEX         = NO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+#include <signal.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
+void alarma(){
+	printf("RING\n");
+	}
+
+main(){
+
+	int i=0;
+
+	if(signal(SIGALRM,alarma)==SIG_ERR){
+		printf("ERROR\n");
+		exit(-1);
+	}
+
+	printf("Alarma nº 1 en 5 s\n");
+	alarm(5);
+	pause();
+
+	printf("Alarma  nº 2 en 3 s\n");
+	alarm(3);
+	pause();
+
+	printf("Bucle de alarmas cada 1 s\n");
+
+	while(1){
+		alarm(1);
+		pause();
+		
+		if(i==4){
+			alarm(0);
+			printf("Finalizando el proceso. \n");
+			kill(getpid(),SIGINT);	
+		}
+		i++;
+	}
+	
+}
+

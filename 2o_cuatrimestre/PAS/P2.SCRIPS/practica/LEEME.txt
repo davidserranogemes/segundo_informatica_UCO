@@ -1,0 +1,16 @@
+Autor: David Serrano Gemes
+Numero scrips: 6
+
+Aclaraciones sobre:
+	-ejercicio4.sh
+	-ejercicio5.sh
+
+--ejercicio4.sh:
+	Crea el fichero codificado en la carpeta $(pwd)
+
+--ejercicio5.sh:
+	--Se ha generalizado de modo que acepta que no se pase como parametro el numero de caracteres, pudiendo pasar unicamente el resumen.
+		En ese caso lo que se hace es probar con todas.
+
+	--El resumen "d3902e622ed64cea963844de17fceb3926e132ce" que se daba en el guion de practicas devuelve la contraseña "pas"
+

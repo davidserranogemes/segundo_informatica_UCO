@@ -1,0 +1,14 @@
+[2016-03-07, 19:22:15] ==> Mensaje enviado: algo que mole de musica.
+[2016-03-07, 19:22:15] ==> Mensaje recibido: No empareja.
+[2016-03-07, 19:22:23] ==> Mensaje enviado: pero no caigo en nada.
+[2016-03-07, 19:22:23] ==> Mensaje recibido: No empareja.
+[2016-03-07, 19:22:28] ==> Mensaje enviado: hay una caida en la calle.
+[2016-03-07, 19:22:28] ==> Mensaje recibido: Empareja.
+[2016-03-07, 19:22:38] ==> Mensaje enviado: si tenemos en cuenta que oriente medio ha sido.
+[2016-03-07, 19:22:38] ==> Mensaje recibido: No empareja.
+[2016-03-07, 19:22:40] ==> Mensaje enviado: el campo de juego.
+[2016-03-07, 19:22:40] ==> Mensaje recibido: No empareja.
+[2016-03-07, 19:23:01] ==> Mensaje enviado: y que para bien o para mal han .
+[2016-03-07, 19:23:01] ==> Mensaje recibido: No empareja.
+[2016-03-07, 19:23:29] ==> Mensaje enviado: exit.
+[2016-03-07, 19:23:29] ==> Mensaje recibido: Fin de la ejecucion..
